@@ -12,6 +12,7 @@ export const metadata: Metadata = {
   icons: {
     icon: "/images/cat-logo.png",
   },
+  metadataBase: new URL("https://flip-nd-find.vercel.app"),
   openGraph: {
     images: "/images/og-image.png",
     title: "Flip & Find - Cat Flip",
