@@ -1,0 +1,5 @@
+@import "tailwindcss";
+
+@theme {
+  --font-press-start-2p: var(--font-press-start-2p);
+}
