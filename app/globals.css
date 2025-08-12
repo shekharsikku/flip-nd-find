@@ -3,3 +3,9 @@
 @theme {
   --font-press-start-2p: var(--font-press-start-2p);
 }
+
+::-webkit-scrollbar {
+  display: none;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
