@@ -41,6 +41,18 @@ export default function Game() {
   });
   const [isLoading, setIsLoading] = useState(false);
 
+  useEffect(() => {
+    const handleContextMenu = (event: MouseEvent) => {
+      event.preventDefault();
+    };
+
+    document.addEventListener("contextmenu", handleContextMenu);
+
+    return () => {
+      document.removeEventListener("contextmenu", handleContextMenu);
+    };
+  }, []);
+
   const initializeCards = () => {
     const duplicatedCats = [...cats, ...cats];
     const shuffledCards = duplicatedCats.sort(() => Math.random() - 0.5);
@@ -270,6 +282,7 @@ export default function Game() {
                         fill
                         sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                         className="object-contain"
+                        priority
                       />
                     </div>
                   </div>
@@ -288,6 +301,7 @@ export default function Game() {
                       fill
                       sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
                       className="object-cover"
+                      priority
                     />
                   </div>
                 </div>
