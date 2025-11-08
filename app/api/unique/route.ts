@@ -14,9 +14,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json({ unique: true });
   } catch (error: any) {
     console.error(`Error: ${error.message}`);
-    return NextResponse.json(
-      { error: "Failed to check unique name!" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to check unique name!" }, { status: 500 });
   }
 }

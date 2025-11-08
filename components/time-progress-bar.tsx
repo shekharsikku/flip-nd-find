@@ -1,12 +1,6 @@
 import React from "react";
 
-export default function TimeProgressBar({
-  value,
-  totalTime,
-}: {
-  value: number;
-  totalTime: number;
-}) {
+export default function TimeProgressBar({ value, totalTime }: { value: number; totalTime: number }) {
   const percentage = (value / totalTime) * 100;
   const barColor =
     percentage > 50

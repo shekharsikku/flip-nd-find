@@ -18,9 +18,6 @@ export async function GET(request: NextRequest) {
     return NextResponse.json(user);
   } catch (error: any) {
     console.error(`Error: ${error.message}`);
-    return NextResponse.json(
-      { error: "Failed to fetch scores!" },
-      { status: 500 },
-    );
+    return NextResponse.json({ error: "Failed to fetch scores!" }, { status: 500 });
   }
 }

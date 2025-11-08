@@ -68,11 +68,7 @@ export default function GameOverModal({
               });
             }}
           />
-          {nameError.isError && (
-            <div className="mt-2 text-[10px] text-red-500">
-              {nameError.message}
-            </div>
-          )}
+          {nameError.isError && <div className="mt-2 text-[10px] text-red-500">{nameError.message}</div>}
         </div>
         <div className="mt-7 flex w-full gap-6">
           <button

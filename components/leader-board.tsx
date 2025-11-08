@@ -46,9 +46,7 @@ export default function Leaderboard() {
       const response = await fetch(`/api/scores?page=${page}&limit=10`);
       if (response.ok) {
         const data = await response.json();
-        setScores((prevScores) =>
-          page === 1 ? data : [...prevScores, ...data],
-        );
+        setScores((prevScores) => (page === 1 ? data : [...prevScores, ...data]));
         if (data.length === 10) {
           setHasMore(true);
         } else {
@@ -74,12 +72,9 @@ export default function Leaderboard() {
   };
 
   const medal = (index: number) => {
-    if (index === 0)
-      return <Image src={gold} alt="gold" width={16} height={16} />;
-    if (index === 1)
-      return <Image src={silver} alt="silver" width={16} height={16} />;
-    if (index === 2)
-      return <Image src={bronze} alt="bronze" width={16} height={16} />;
+    if (index === 0) return <Image src={gold} alt="gold" width={16} height={16} />;
+    if (index === 1) return <Image src={silver} alt="silver" width={16} height={16} />;
+    if (index === 2) return <Image src={bronze} alt="bronze" width={16} height={16} />;
     return "";
   };
 

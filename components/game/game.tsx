@@ -60,12 +60,7 @@ export default function Game() {
   };
 
   const handleCardClick = (index: number) => {
-    if (
-      matchedCards.includes(index) ||
-      flippedCards.includes(index) ||
-      flippedCards.length >= 2 ||
-      !gameStarted
-    )
+    if (matchedCards.includes(index) || flippedCards.includes(index) || flippedCards.length >= 2 || !gameStarted)
       return;
     playAudio("click");
     const newFlippedCards = [...flippedCards, index];
@@ -260,10 +255,7 @@ export default function Game() {
                   style={{
                     transformStyle: "preserve-3d",
                     transform: `rotateY(${
-                      flippedCards.includes(index) ||
-                      matchedCards.includes(index)
-                        ? "180deg"
-                        : "0deg"
+                      flippedCards.includes(index) || matchedCards.includes(index) ? "180deg" : "0deg"
                     })`,
                   }}
                 >

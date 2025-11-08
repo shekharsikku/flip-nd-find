@@ -14,9 +14,7 @@ export default function Header() {
             <Image src={catLogo} alt="cat" width={32} height={32} />
             <h1 className="text-sm text-gray-900 sm:text-base">
               CAT
-              <span className="ml-1 inline-block rotate-y-180 text-amber-900">
-                FLIP
-              </span>
+              <span className="ml-1 inline-block rotate-y-180 text-amber-900">FLIP</span>
             </h1>
           </div>{" "}
         </Link>
